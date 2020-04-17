@@ -49,3 +49,47 @@ for (let index = 1; index <= 100; index++) {
     }
     
 }
+
+/*
+
+Write a program that creates a string that represents an 8x8 grid,
+using new-line characters to separate lines. At each position of the
+grid there is either a space or a # character. The characters should
+form a chessboard.
+
+Passing this string to console.log should show something like this:
+
+________________________________________________
+
+ # # # #
+# # # #
+ # # # #
+# # # #
+ # # # #
+# # # #
+ # # # #
+# # # #
+________________________________________________
+
+When you have a program that generates this pattern, define a binding
+size = 8 and change the program so that it works for any size,
+outputting a grid of the given width and height.
+
+*/
+
+function chessboard(size) {
+    var rawLine = '# # # #';
+    
+    for (index = 0; index < size;) {
+        var divisibleByTwo = index % 2 == 0;
+        if (divisibleByTwo) {
+            console.log(' ' + rawLine);
+        }
+        else {
+            console.log(rawLine);
+        }
+        index++;
+    }
+}
+
+chessboard(8);
